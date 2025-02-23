@@ -1,4 +1,4 @@
-# Proyectos-Intelligencia Artificial
+# Proyectos-Procesamiento de Imágenes
 
 ## Proyectos realizados para la materia Procesamiento de Imágenes
 
@@ -14,7 +14,7 @@
     3. Abrir git bash aqui
     
     ```bash
-    git clone https://github.com/ItsDINOSAURIO/Proyectos_Patrones.git
+    git clone https://github.com/ItsDINOSAURIO/Procesamiento-de-Imagenes.git
     cd Proyecto 
     ```
 **cd mueve a bash a la carpeta específica donde se trabajará**
