@@ -1,0 +1,114 @@
+function [Letra] = SeleccionLetras(Momentos)
+
+%%
+load MomentosHuA.mat
+load MomentosHuB.mat
+load MomentosHuC.mat
+load MomentosHuD.mat
+load MomentosHuE.mat
+load MomentosHuF.mat
+load MomentosHuG.mat
+load MomentosHuS.mat
+load MomentosHuT.mat
+load MomentosHuU.mat
+load MomentosHuX.mat
+load MomentosHuY.mat
+load MomentosHuR.mat
+load MomentosHuJ.mat
+load MomentosHuL.mat
+load MomentosHuM.mat
+load MomentosHuN.mat
+load MomentosHuO.mat
+load MomentosHuP.mat
+load MomentosHuI.mat
+%% Calcular media y desv estandar de cada uno de los momentos
+for i=1:8
+    AvP = mean(MomentosHuA);
+    BvP = mean(MomentosHuB);
+    CvP = mean(MomentosHuC);
+    DvP = mean(MomentosHuD);
+    EvP = mean(MomentosHuE);
+    FvP = mean(MomentosHuF);
+    GvP = mean(MomentosHuG);
+    IvP = mean(MomentosHuI);
+    JvP = mean(MomentosHuJ);
+    LvP = mean(MomentosHuL);
+    MvP = mean(MomentosHuM);
+    NvP = mean(MomentosHuN);
+    OvP = mean(MomentosHuO);
+    PvP = mean(MomentosHuP);
+    RvP = mean(MomentosHuR);
+    SvP = mean(MomentosHuS);
+    TvP = mean(MomentosHuT);
+    UvP = mean(MomentosHuU);
+    XvP = mean(MomentosHuX);
+    YvP = mean(MomentosHuY);
+end
+%%
+ D1 = sqrt(sum((Momentos - AvP).^2, 2));
+ D2 = sqrt(sum((Momentos - BvP).^2, 2));
+ D3 = sqrt(sum((Momentos - CvP).^2, 2));
+ D4 = sqrt(sum((Momentos - DvP).^2, 2));
+ D5 = sqrt(sum((Momentos - EvP).^2, 2));
+ D6 = sqrt(sum((Momentos - FvP).^2, 2));
+ D7 = sqrt(sum((Momentos - GvP).^2, 2));
+ D8 = sqrt(sum((Momentos - IvP).^2, 2));
+ D9 = sqrt(sum((Momentos - JvP).^2, 2));
+ D10 = sqrt(sum((Momentos - LvP).^2, 2));
+ D11 = sqrt(sum((Momentos - MvP).^2, 2));
+ D12 = sqrt(sum((Momentos - NvP).^2, 2));
+ D13 = sqrt(sum((Momentos - OvP).^2, 2));
+ D14 = sqrt(sum((Momentos - PvP).^2, 2));
+ D15 = sqrt(sum((Momentos - RvP).^2, 2));
+ D16 = sqrt(sum((Momentos - SvP).^2, 2));
+ D17 = sqrt(sum((Momentos - TvP).^2, 2));
+ D18 = sqrt(sum((Momentos - UvP).^2, 2));
+ D19 = sqrt(sum((Momentos - XvP).^2, 2));
+ D20 = sqrt(sum((Momentos - YvP).^2, 2));
+Distancias = [D1 D2 D3 D4 D5 D6 D7 D8 D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20];
+ 
+%%
+if(D1 == min(Distancias))
+    Letra = 'A';
+elseif(D2 == min(Distancias))
+    Letra = 'B';
+elseif(D3 == min(Distancias))
+    Letra = 'C';
+elseif(D4 == min(Distancias))
+    Letra = 'D';
+elseif(D5 == min(Distancias))
+    Letra = 'E';
+elseif(D6 == min(Distancias))
+    Letra = 'F';
+elseif(D7 == min(Distancias))
+    Letra = 'G';
+% elseif(LM1<= I.mM1 + I.DM1 && LM1 >= I.mM1 - I.DM1) && (LM2<= I.mM2 + I.DM2 && LM2 >= I.mM2 - I.DM2) && (LM3<= I.mM3 + I.DM3 && LM3 >= I.mM3 - I.DM3) && (LM4<= I.mM4 + I.DM4 && LM4 >= I.mM4 - I.DM4) && (LM5<= I.mM5 + I.DM5 && LM5 >= I.mM5 - I.DM5) && (LM6<= I.mM6 + I.DM6 && LM6 >= I.mM6 - I.DM6) && (LM7<= I.mM7 + I.DM7 && LM7 >= I.mM7 - I.DM7) && (LM8<= I.mM8 + I.DM8 && LM8 >= I.mM8 - I.DM8))
+%     Letra = 'I';
+elseif(D9 == min(Distancias))
+    Letra = 'J';
+elseif(D10 == min(Distancias))
+    Letra = 'L';
+elseif(D11 == min(Distancias))
+    Letra = 'M';
+elseif(D12 == min(Distancias))
+    Letra = 'N';
+elseif(D13 == min(Distancias))
+    Letra = 'O';
+elseif(D14 == min(Distancias))
+    Letra = 'P';
+elseif(D15 == min(Distancias))
+    Letra = 'R';
+elseif(D16 == min(Distancias))
+    Letra = 'S';
+elseif(D17 == min(Distancias))
+    Letra = 'T';
+elseif(D18 == min(Distancias))
+    Letra = 'U';
+elseif(D19 == min(Distancias))
+    Letra = 'X';
+elseif(D20 == min(Distancias))
+    Letra = 'Y';
+else
+    Letra = 'NR';
+end
+end

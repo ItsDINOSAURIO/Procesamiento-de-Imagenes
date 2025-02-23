@@ -1,0 +1,97 @@
+function[] = SeleccionPalabra(Palabra)
+palabra1= "BOCA";
+palabra2= "MEXICO";
+palabra3= "RAMA";
+palabra4= "JOYA";
+palabra5= "TUBO";
+palabra6= "ROJA";
+palabra7= "LABIO";
+palabra8= "SOLA";
+palabra9= "PASAJE";
+palabra10= "PODADO";
+palabra11= "TUBERIA";
+palabra12= "GATUNO";
+palabra13= "GAXIOLA";
+palabra14= "FOTOGENIA";
+palabra15= "XIMENA";
+
+[y1,Fs1] = audioread('Boca.wav');
+[y2,Fs2] = audioread('Mexico.wav');
+[y3,Fs3] = audioread('Rama.wav');
+[y4,Fs4] = audioread('Joya.wav');
+[y5,Fs5] = audioread('Tubo.wav');
+[y6,Fs6] = audioread('Roja.wav');
+[y7,Fs7] = audioread('Labio.wav');
+[y8,Fs8] = audioread('Sola.wav');
+[y9,Fs9] = audioread('Pasaje.wav');
+[y10,Fs10] = audioread('Podado.wav');
+[y11,Fs11] = audioread('Tubería.wav');
+[y12,Fs12] = audioread('Gatuno.wav');
+[y13,Fs13] = audioread('Gaxiola.wav');
+[y14,Fs14] = audioread('Fotogenia.wav');
+[y15,Fs15] = audioread('Ximena.wav');
+
+if Palabra == palabra1
+     disp("La palabra reconocida es: ")
+     disp(palabra1)
+%      sound(y1,Fs1)
+elseif Palabra == palabra2
+     disp("La palabra reconocida es: ")
+     disp(palabra2)
+%      sound(y2,Fs2);
+elseif Palabra == palabra3
+     disp("La palabra reconocida es: ")
+     disp(palabra3)
+%      sound(y3,Fs3);
+elseif Palabra == palabra4
+     disp("La palabra reconocida es: ")
+     disp(palabra4)
+%      sound(y4,Fs4);
+elseif Palabra == palabra5
+     disp("La palabra reconocida es: ")
+     disp(palabra5)
+%      sound(y5,Fs5);
+elseif Palabra == palabra6
+     disp("La palabra reconocida es: ")
+     disp(palabra6)
+%      sound(y6,Fs6);
+elseif Palabra == palabra7
+     disp("La palabra reconocida es: ")
+     disp(palabra7)
+%      sound(y7,Fs7);
+elseif Palabra == palabra8
+     disp("La palabra reconocida es: ")
+     disp(palabra8)
+%      sound(y8,Fs8);
+elseif Palabra == palabra9
+     disp("La palabra reconocida es: ")
+     disp(palabra9)
+%      sound(y9,Fs9);
+elseif Palabra == palabra10
+     disp("La palabra reconocida es: ")
+     disp(palabra10)
+%      sound(y10,Fs10);
+elseif Palabra == palabra11
+     disp("La palabra reconocida es: ")
+     disp(palabra11)
+%      sound(y11,Fs11);
+elseif Palabra == palabra12
+     disp("La palabra reconocida es: ")
+     disp(palabra12)
+%      sound(y12,Fs12);
+elseif Palabra == palabra13
+     disp("La palabra reconocida es: ")
+     disp(palabra13)
+%      sound(y13,Fs13);
+elseif Palabra == palabra14
+     disp("La palabra reconocida es: ")
+     disp(palabra14)
+%      sound(y14,Fs14);
+elseif Palabra == palabra15
+     disp("La palabra reconocida es: ")
+     disp(palabra15)
+%      sound(y15,Fs15);
+else
+    disp("No se reconoce la palabra ")
+end
+end

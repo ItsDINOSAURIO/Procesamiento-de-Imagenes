@@ -1,0 +1,25 @@
+%%Inicializamos
+MomentosHuLet = zeros(1,8);
+%%
+%Caracterización de las letras
+format longEng
+letra = imread('N.png');
+LG = coloragrisHGF(letra);
+[x y] = size(LG);
+
+LetBin = zeros(x,y);
+for i=1:x
+    for j=1:y
+        if(LG(i,j)>=120)
+            LetBin(i,j) = 0;
+        else
+            LetBin(i,j) = 255;
+        end
+    end
+end
+
+%Calculamos el momento de la imagen y lo almacenamos 
+MomentosHuLet(1,:) = hu(LetBin);
+
+
+

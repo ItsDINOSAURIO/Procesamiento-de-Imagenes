@@ -1,0 +1,51 @@
+
+%Reconocedor de palabras
+palabra = imread('MEXICO.jpg');
+PG = coloragrisHGF(palabra);
+[x y] = size(PG);
+PalBin = zeros(x,y);
+for i=1:x
+    for j=1:y
+        if(PG(i,j)>=150)
+            PalBin(i,j) = 0;
+        else
+            PalBin(i,j) = 255;
+        end
+    end
+end
+figure(1)
+imshow(PalBin)
+[L,S] = bwlabel(PalBin);
+props = regionprops(L, 'BoundingBox');
+props2 = regionprops(L,PalBin,'PixelValues');
+LetraMom = zeros(S,8);
+LetraRec = zeros(1,S);
+LetraRec = string(LetraRec);
+Pal = [""];
+for i = 1:S
+    if(length(props2(i).PixelValues)>=1.5e3)
+    regionOfInterest = props(i).BoundingBox;
+    roiImage = imcrop(L, regionOfInterest);
+    [M,N]=size(roiImage);
+    I = zeros(M,N);
+    for k=1:M
+        for j=1:N
+            if(roiImage(k,j)==i)
+                I(k,j)=255;
+            else
+                 I(k,j)=0;
+            end
+        end
+    end
+     figure(i)
+     imshow(I)
+    LetraMom(i,:) = hu(I);
+    LetraRec(1,i) = SeleccionLetras(LetraMom(i,:));
+    Pal = Pal + LetraRec(1,i);
+    end
+end
+SeleccionPalabra(Pal);
+
+
+
+
